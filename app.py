@@ -6,7 +6,7 @@ import os
 import base64
 from io import BytesIO
 
-st.set_page_config(page_title="Perfil Dermatológico · Recomendador",
+st.set_page_config(page_title="Recomendador de Skincare · Recomendador",
                    page_icon="🌸", layout="centered")
 
 # ─────────────────────────────────────────────────────────────
