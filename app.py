@@ -421,7 +421,7 @@ def generar_pdf(perfil, am, pm):
 
 # ═════════════════════════════════════════════════════════════
 mostrar_banner()
-st.markdown("# Tu perfil dermatológico")
+st.markdown("# Tu rutina de skincare personalizada")
 st.markdown("Un cuestionario breve determina tu tipo de piel y construye una rutina de "
             "cuidado facial pensada para ti, dividida en día y noche.")
 st.info("Prototipo académico de orientación cosmética. No reemplaza una consulta dermatológica profesional.")
@@ -544,7 +544,7 @@ if st.button("Revelar mi rutina", type="primary", use_container_width=True):
     st.markdown('<p class="eyebrow">Tu resultado</p>', unsafe_allow_html=True)
     st.markdown(f"# Tipo de piel: {perfil}")
 
-    # MEJORA 1 — Diagrama de los 4 ejes
+    # Diagrama de los 4 ejes
     st.markdown('<p class="eyebrow">Tu perfil en los cuatro ejes de Baumann</p>', unsafe_allow_html=True)
     for key, nombre, izq, der, minv, maxv in EJES_META:
         val = scores[key]
@@ -580,7 +580,7 @@ if st.button("Revelar mi rutina", type="primary", use_container_width=True):
                 "el día y la de **noche** la repara y renueva mientras descansas.")
     st.divider()
 
-    # MEJORA 4 — Rutinas AM/PM con explicación por producto
+    # Rutinas AM/PM con explicación por producto
     col1, col2 = st.columns(2)
     with col1:
         st.markdown('### ☀️ Mañana')
@@ -599,7 +599,7 @@ if st.button("Revelar mi rutina", type="primary", use_container_width=True):
                 with st.expander("¿Por qué?"):
                     st.caption(EXPLICACION_PRODUCTO[cod])
 
-    # MEJORA 2 — Confianza del modelo por categoría
+    # Confianza del modelo por categoría
     st.divider()
     st.markdown('<p class="eyebrow">Confianza del modelo por categoría</p>', unsafe_allow_html=True)
     filas = st.columns(4)
@@ -609,7 +609,7 @@ if st.button("Revelar mi rutina", type="primary", use_container_width=True):
             with filas[idx % 4]:
                 st.markdown(f"**{cat.capitalize()}** {chip_confianza(c)}", unsafe_allow_html=True)
 
-    # MEJORA 3 — Descarga PDF
+    # Descarga PDF
     st.divider()
     try:
         pdf = generar_pdf(perfil, am, pm)
