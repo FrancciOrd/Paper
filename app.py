@@ -1,10 +1,3 @@
-# =============================================================
-# PROTOTIPO DE RECOMENDACIÓN DE RUTINAS DE SKINCARE
-# Francheska Ordoñez & David Blas - USIL 2026
-# Modelo: XGBoost (clasificación multiclase de salidas múltiples)
-# Basado en el sistema de clasificación de Baumann (2016)
-# =============================================================
-
 import streamlit as st
 import pandas as pd
 import numpy as np
